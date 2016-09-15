@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="wayfarer.mhacks.com.wayfarer.Map">
+
+    <RadioGroup
+        android:layout_marginTop="33dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radioGroupMap"
+        android:checkedButton="@+id/gmaps"
+        android:layout_marginRight="33dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="esri"
+            android:id="@+id/esri"
+            android:onClick="map_type"
+            android:textSize="27sp"
+            android:layout_marginRight="24dp"/>
+
+        <RadioButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="gmaps"
+            android:id="@+id/gmaps"
+            android:onClick="map_type"
+            android:layout_marginLeft="24dp"
+
+            android:textSize="27sp"
+            />
+    </RadioGroup>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editLocation"
+        android:hint="location"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/radioGroupMap"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get map"
+        android:id="@+id/mapbutton"
+        android:layout_marginTop="60dp"
+        android:onClick="map"
+        android:radius="10dp"
+        android:background="@null"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:textAllCaps="false"
+        android:textSize="42sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below="@+id/editLocation"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mapimg"
+        android:layout_below="@+id/mapbutton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:contentDescription="Map" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="directions:"
+        android:id="@+id/dirlabel"
+        android:layout_marginTop="186dp"
+        android:radius="10dp"
+        android:background="@null"
+        android:layout_centerHorizontal="true"
+        android:paddingLeft="30dip"
+        android:paddingRight="30dip"
+        android:textAllCaps="false"
+        android:textSize="42sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_below="@+id/mapbutton"
+        android:visibility="invisible"/>
+
+
+</RelativeLayout>
+
+</ScrollView>
